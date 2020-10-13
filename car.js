@@ -1,0 +1,20 @@
+class Car
+{
+ constructor(a,b,c,d)
+ {
+  this.body=Matter.Bodies.rectangle(a,b,c,d);
+  Matter.World.add(engine.world,this.body);
+  this.width=c;
+  this.height=d;
+  //this.image=loadImage("wood1.png");
+ }
+ Display()
+ {
+     push();
+     translate(this.body.position.x,this.body.position.y);
+     rotate(this.body.angle*180/PI);
+     rectMode(CENTER);
+     rectangle(0,0,this.width,this.height);
+     pop();
+ }
+}
